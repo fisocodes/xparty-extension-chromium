@@ -1,3 +1,10 @@
 {
+    "manifest_version": 3,
+    "name": "xparty",
+    "description": "Watch videos in party",
+    "background": {
+        "service_worker": "service-worker.js",
+        "type": "module"
+    },
     "version": "0.0.1"
 }
