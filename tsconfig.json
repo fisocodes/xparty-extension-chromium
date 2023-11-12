@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "NodeNext",
+        "target": "ESNext",
+        "alwaysStrict": true,
+        "noEmitOnError": true,
+        "noImplicitOverride": true,
+        "noUnusedParameters": true,
+        "pretty": true,
+        "sourceMap": false,
+        "rootDir": "./src/",
+        "strictNullChecks": true,
+        "jsx": "react"
+    }
+}

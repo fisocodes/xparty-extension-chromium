@@ -1,0 +1,24 @@
+{
+  "name": "xparty-extension-chromium",
+  "version": "0.0.1",
+  "description": "xparty extension for chromium based browsers",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack",
+    "watch": "npx webpack --watch"
+  },
+  "keywords": [
+    "xparty",
+    "extension",
+    "chromium"
+  ],
+  "author": "fisocodes@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
