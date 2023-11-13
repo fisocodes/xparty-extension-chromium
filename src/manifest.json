@@ -8,8 +8,15 @@
         "service_worker": "service-worker.js",
         "type": "module"
     },
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/watch*"],
+            "js": ["content/video-handler.js"]
+        }
+    ],
     "permissions": [
         "history",
-        "declarativeContent"
+        "tabs",
+        "storage"
     ]
 }

@@ -7,6 +7,10 @@ module.exports =  {
         serviceWorker: {
             import: './src/service-worker/index.ts',
             filename: 'service-worker.js'
+        },
+        videoHandler: {
+            import: './src/content/video-handler/index.ts',
+            filename: 'content/video-handler.js'
         }
     },
     module: {
