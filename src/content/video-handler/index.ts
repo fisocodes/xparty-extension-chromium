@@ -1,5 +1,3 @@
-console.log('VIDEO HANDLER MOUNTED')
-
 const videoElement: HTMLVideoElement | null = document.querySelector('video.video-stream.html5-main-video')
 
 function videoListener()

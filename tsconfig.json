@@ -12,6 +12,6 @@
         "sourceMap": false,
         "rootDir": "./src/",
         "strictNullChecks": true,
-        "jsx": "react"
+        "jsx": "react-jsx"
     }
 }
