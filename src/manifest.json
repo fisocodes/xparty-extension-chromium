@@ -15,6 +15,10 @@
         {
             "matches": ["https://www.youtube.com/watch*"],
             "js": ["content/video-handler.js"]
+        },
+        {
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["content/gui.js"]
         }
     ],
     "permissions": [

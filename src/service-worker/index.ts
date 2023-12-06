@@ -1,3 +1,7 @@
+chrome.storage.session.setAccessLevel({accessLevel: 'TRUSTED_AND_UNTRUSTED_CONTEXTS'})
+
+// jsonlink
+
 chrome.webNavigation.onHistoryStateUpdated.addListener(async ({url}) =>
 {
     const {search: query} = new URL(url)

@@ -13,14 +13,33 @@ function Index()
 {
     const [xpartyId, setXpartyId] = useState<string | undefined>()
 
-    chrome.storage.onChanged.addListener(async ({xpartyId}) =>
+    useEffect(() =>
     {
-        if(xpartyId)
-        setXpartyId(xpartyId.newValue)
-    })
+        const getXpartyId = async () =>
+        {
+            const {xpartyId} = await chrome.storage.session.get('xpartyId')
+            setXpartyId(xpartyId)
+        }
+
+        getXpartyId()
+        
+        const storageListener = ({xpartyId}:{xpartyId: chrome.storage.StorageChange}, area: chrome.storage.AreaName) =>
+        {
+            if(area === 'session' && xpartyId)
+            {
+                console.log(xpartyId)
+                setXpartyId(xpartyId?.newValue)
+            }
+        }
+
+        chrome.storage.onChanged.addListener(storageListener)
+
+        return () => chrome.storage.onChanged.removeListener(storageListener)
+
+    }, [])
 
     return <NextUIProvider>
-        <div className='bg-stone-950 w-80 p-8'>
+        <div className='bg-neutral-800 w-80 p-8'>
             <h1 className='font-["Comfortaa"] text-center text-5xl tracking-widest text-gray-300'>xparty</h1>
             <div className='my-8'>
                 {xpartyId ? <Party/> : <StartJoin/>}

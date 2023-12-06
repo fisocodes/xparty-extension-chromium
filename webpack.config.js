@@ -16,6 +16,10 @@ module.exports =  {
         popup: {
             import: './src/popup/index.tsx',
             filename: 'popup/popup.js'
+        },
+        gui: {
+            import: './src/content/gui/index.tsx',
+            filename: 'content/gui.js'
         }
     },
     module: {
